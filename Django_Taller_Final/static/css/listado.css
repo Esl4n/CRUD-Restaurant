@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+table{
+    border: 5px solid;
+    background-color: black;
+}
+
+th{
+    color:#f00;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+}
+
+td{
+    color:#fff;
+    border: 1px solid #fff;
+
+}
+
+tbody tr:hover{
+    background: grey;
+}

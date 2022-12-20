@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    background: url("../img/fondo.jpg") center;
+    height: 100vh;
+    background-size: cover;
+}
+
+.backg{background-color: rgb(0, 0, 0, 0.441);}
+
+form{
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+    margin: 2cm auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 50px 0;
+    border-radius: 20px;
+}
+
+
+label{
+    margin:0 0 5px 5px ;
+    font-size: 20px;
+}
+
+
+.Fecha_hora{
+    margin-top: 20px;
+}
+

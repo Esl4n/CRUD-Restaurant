@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/modificar.css'%}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="backg">
+
+            <form  method="POST" action="modificar_r" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="{{ reserva.id }}">
+                    {% csrf_token %}
+                    <div class="row  justify-content-center">
+                        <div class="col-md-4">
+                            <label  class="form-label">Nombre*</label>
+                            <input value="{{reserva.nombre}}" placeholder="Ingresa tu nombre" type="text" name="nombre" class="form-control bg-light"  required>
+                        </div>
+                        <div class="col-md-4">
+                            <label  class="form-label">Apellido*</label>
+                            <input value="{{reserva.apellido}}" placeholder="Ingresa tu apellido" type="text" name="apellido" class="form-control bg-light"  required>
+                        </div>
+                    </div>
+                    <div class="row  justify-content-center">
+                    <div class="col-md-8">
+                        <label  class="form-label">Telefono*</label>
+                        <input value="{{reserva.telefono}}" placeholder="Ingresa tu Telefono" type="tel" name="telefono" class="form-control bg-light"  required>
+                    </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <label  class="form-label">Fecha*</label>
+                            <input type="date" name="fecha" class="form-control bg-light" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label  class="form-label">Hora*</label>
+                            <input type="time" name="hora" class="form-control bg-light" required>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <label class="form-label">Cantidad de personas*</label>
+                            <select  name="personas" required>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+                    </div> 
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <label class="form-label">Estado*</label>
+                            <select   name="estado" required>
+                                <option value="Reservado">Reservado</option>
+                                <option value="Completada">Completada</option>
+                                <option value="Anulada">Anulada</option>
+                                <option value="No asisten">No asisten</option>
+                            </select>
+                        </div>
+                    </div> 
+                    <div class="row justify-content-center">
+                        <div class="form-floating col-md-8">
+                            <textarea  name="observacion" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label  for="floatingTextarea2">Comments</label>
+                        </div>
+                    </div>
+                    <div class="row mt-5 justify-content-center">
+                        <button type="submit" class="btn btn-success col-md-4">Cambiar</button>
+                    </div>
+                    <div class="row mt-2 justify-content-center">
+                        <a href="/listado" class="btn btn-danger col-md-4">Volver</a>
+                    </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</html>

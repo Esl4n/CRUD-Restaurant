@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: url("../img/fondo.jpg") center;
+    height: 100vh;
+    background-size: cover;
+}
+
+.L{background-color: rgb(255, 255, 255, 0.441);}
+.R{background-color: rgb(0, 0, 0, 0.441);}
+
+form{
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+    margin: 2cm auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 50px 0;
+    border-radius: 20px;
+}
+
+.contenedor-opciones{
+    box-shadow: 0px 1px 2px 0px rgb(0 0 0 / 15%);
+    background-color: #fafafa;
+    margin-top: 10px;
+}
+.contenedor-opciones p{
+    margin: 10px 0 20px 15px;
+}
+.contenedor-botones{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    color: #000;
+}
+.boton-numero{
+    box-shadow:  0 1px 0 0 #c5c5ca;
+    width: 56px;
+    height: 32px;
+    background-color: #fff;
+    border: 1px solid #fff ;
+    border-radius: 15%;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.boton-numero:hover{
+    animation: box 2s infinite;
+}
+
+.boton-numero:active{
+    background-color: gray;
+}
+
+.solicitud{
+    display: flex;
+}
+
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+.content-select select::-ms-expand {
+    display: none;
+}
+
+
+.content-select{
+	max-width: 250px;
+	position: relative;
+}
+
+.content-select select{
+	display: inline-block;
+	width: 50px;
+    height: 30px;
+	cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #fff ;
+    margin-left: 3px;
+    position: relative;
+    box-shadow:  0 1px 0 0 #c5c5ca;
+    text-align: center;
+    border-radius: 15%;
+}
+
+
+@keyframes box{
+    100%{
+        box-shadow:  0 1px 1px 0 #000;
+    }
+}
+
+
+label{
+    margin:0 0 5px 5px ;
+    font-size: 20px;
+}
+
+
+.Fecha_hora{
+    margin-top: 20px;
+}
+
+
+
+.menu{
+    margin-top: 40%;
+    margin-left: 2cm;
+    color: #000;
+    font-size: 40px;
+}
+
+span{
+    color: #f00;
+}
+
+svg{
+    margin-left: 10px;
+}
+
+.msj{
+    font-size: 15px;
+    color: #f00;
+}
+
+@media screen and (max-width:2188px) {
+    
+    .contenedor{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: url("../img/fondo.jpg") center;
+        height: 100vh;
+        background-size: cover;
+    }
+
+}
+
+
+@media screen and (max-width:1350px){
+    .contenedor{
+        grid-template-columns: 1fr;
+    }
+}
